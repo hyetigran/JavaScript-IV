@@ -10,3 +10,13 @@ class GameObject {
 		return `${this.name} was removed from the game.`;
 	}
 }
+
+class CharacterStats {
+	constructor(data) {
+		super(data);
+		this.healthPoints = data.healthPoints;
+	}
+	takeDamage() {
+		return `${this.name} took damage.`;
+	}
+}
