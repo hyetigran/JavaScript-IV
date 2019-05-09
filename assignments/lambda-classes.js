@@ -11,7 +11,7 @@ class GameObject {
 	}
 }
 
-class CharacterStats {
+class CharacterStats extends GameObject {
 	constructor(data) {
 		super(data);
 		this.healthPoints = data.healthPoints;
