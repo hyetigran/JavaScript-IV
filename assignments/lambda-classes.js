@@ -87,3 +87,68 @@ console.log(archer.language); // Elvish
 console.log(archer.greet()); // Lilith offers a greeting in Elvish.
 console.log(mage.takeDamage()); // Bruce took damage.
 console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
+
+// Stretch task:
+// * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.
+// * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
+// * Create two new objects, one a villain and one a hero and fight it out with methods!
+
+class Villian extends Humanoid {
+	constructor(data) {
+		super(data);
+	}
+	forceLightning() {
+		return {
+			if(OmniSlash) {
+				return (this.healthPoints = this.healthPoints - 10);
+			}
+		};
+	}
+	tellSecret() {
+		return `I am your father`;
+	}
+}
+class Hero extends Humanoid {
+	constructor(data) {
+		super(data);
+	}
+	omniSlash() {
+		return {
+			if(forceLightning) {
+				return (this.healthPoints = this.healthPoints - 10);
+			}
+		};
+	}
+}
+
+const sith = new VilliancreatedAt({
+	createdAt: new Date(),
+	dimensions: {
+		length: 1,
+		width: 2,
+		height: 4
+	},
+	healthPoints: 100,
+	name: 'Darth Vadar',
+	team: 'Sith',
+	weapons: ['Light Saber', 'Dark Side'],
+	language: 'Common Tongue'
+});
+
+const jedi = new VilliancreatedAt({
+	createdAt: new Date(),
+	dimensions: {
+		length: 1,
+		width: 2,
+		height: 4
+	},
+	healthPoints: 75,
+	name: 'Darth Vadar',
+	team: 'Sith',
+	weapons: ['Light Saber', 'Force'],
+	language: 'Common Tongue'
+});
+
+console.log(sith.forceLightning());
+console.log(jedi.omniSlash());
+console.log(sith.tellSecret());
