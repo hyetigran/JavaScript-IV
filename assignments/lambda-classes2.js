@@ -23,6 +23,16 @@ class Instructor extends Person {
 	grade(student, subject) {
 		console.log(`${student.name} receives a perfect score on ${subject}`);
 	}
+	//Stretch
+	// score(grade){
+	//   setInterval(function(){
+	//     random = (Math.floor((Math.random() * 10) + 1));
+	//     let plusOrMinus = Math.random() < .5 ? -1 : 1;
+	//     random = random * plusOrMinus;
+	//     currentNum = grade + random;
+
+	//   }
+	// }
 }
 
 class Student extends Person {
@@ -31,6 +41,7 @@ class Student extends Person {
 		this.previousBackground = studentData.previousBackground;
 		this.className = studentData.className;
 		this.favSubjects = studentData.favSubjects;
+		this.grade = studentData.grade; //Stretch
 	}
 	listsSubjects(subjects) {
 		for (let i = 0; i < subjects.length; i++) {
@@ -42,6 +53,14 @@ class Student extends Person {
 	}
 	sprintChallenge(student, subject) {
 		console.log(`${student.name} has began sprint challenge on ${subject}`);
+	}
+	//Stretch
+	graduate(grade, student) {
+		if (grade >= 70) {
+			console.log(`Congratulations ${student.name}`);
+		} else {
+			console.log('Keep trying');
+		}
 	}
 }
 
@@ -78,7 +97,8 @@ const tigran = new Student({
 	gender: 'M',
 	previousBackground: 'Finance',
 	className: 'WEBEU2',
-	favSubjects: 'JavaScript'
+	favSubjects: 'JavaScript',
+	grade: Math.floor(Math.random() * 6) + 1 // Stretch: Assigns random number between 1 and 100
 });
 
 const gabe = new Instructor({
